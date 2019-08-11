@@ -3035,7 +3035,7 @@
 				},
 				"GyMd": {
 					"d": "GGGGG y-MM-dd – y-MM-dd",
-					"G": "GGGGG y-MM-dd ��� GGGGG y-MM-dd",
+					"G": "GGGGG y-MM-dd ����� GGGGG y-MM-dd",
 					"M": "GGGGG y-MM-dd – y-MM-dd",
 					"y": "GGGGG y-MM-dd – y-MM-dd"
 				},

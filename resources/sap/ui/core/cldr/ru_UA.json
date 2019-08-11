@@ -1664,7 +1664,7 @@
 					"M": "M–M"
 				},
 				"Md": {
-					"d": "dd.MM �� dd.MM",
+					"d": "dd.MM – dd.MM",
 					"M": "dd.MM – dd.MM"
 				},
 				"MEd": {
