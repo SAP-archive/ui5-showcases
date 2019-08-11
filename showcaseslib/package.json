@@ -1,0 +1,26 @@
+{
+  "name": "showcaseslib",
+  "version": "1.0.0",
+  "description": "UI5 showcases application",
+  "dependencies": {
+    "@openui5/sap.m": "^1.60.1",
+    "@openui5/sap.ui.core": "^1.60.1",
+    "@openui5/sap.ui.layout": "^1.60.1",
+    "@openui5/sap.uxap": "^1.60.1",
+    "@openui5/sap.ui.unified": "^1.60.1",
+    "@openui5/themelib_sap_belize": "^1.60.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SAP/ui5-showcases.git"
+  },
+  "files": [
+    "./src",
+    "ui5.yaml"
+  ],
+  "author": "SAP SE",
+  "contributors": [
+    "SAP SE <*@sap.com>"
+  ],
+  "license": "License 2.0"
+}

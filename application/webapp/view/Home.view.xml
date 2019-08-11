@@ -1,0 +1,13 @@
+<mvc:View
+	controllerName="sap.ui5.showcaseApp.controller.App"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Page id="page" showHeader="false">
+		<core:ComponentContainer
+			id="showCaseComponent"
+			usage="showcase"
+			componentCreated=".onShowCaseComponentCreated"/>
+	</Page>
+</mvc:View>

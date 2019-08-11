@@ -1,0 +1,99 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:sc="showcaseslib.shared.control">
+	<l:Grid defaultSpan="XL4 L4 M6 S12" >
+		<Panel class="sc-text--align-center">
+			<sc:FrameImage
+				src="{
+					path: 'image/url',
+					formatter: '.formatter.getSmallImage'
+				}"
+				device="{image/device}">
+			<sc:detailBox>
+				<LightBox>
+					<LightBoxItem
+						imageSrc="{
+							path: 'image/url',
+							formatter: '.formatter.getLargeImage'
+						}"
+						alt="{image/text}"
+						title="{title}">
+					</LightBoxItem>
+				</LightBox>
+			</sc:detailBox>
+			</sc:FrameImage>
+			<l:HorizontalLayout content="{path: 'devices', templateShareable:false}">
+				<Image
+						src="{
+							path:'',
+							formatter:'.formatter.supportedDeviceUrl'
+						}"
+						decorative="false"
+						visible="true"
+						densityAware="false"
+						class="DeviceImages"/>
+			</l:HorizontalLayout>
+		</Panel>
+		<Panel class="DetailsBox">
+			<l:VerticalLayout>
+			<Title
+				text="{title}"
+				wrapping="true"
+				level="H2"
+				titleStyle="H2"
+				class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"/>
+			<Title
+				text="{author}"
+				level="H6"
+				titleStyle="H6"
+				class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"/>
+			<Text
+				class="showcaseDetailsText sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"
+				text="{description}"/>
+			<Text
+				class="showcaseDetailsText sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"
+				text="{usage}"/>
+			</l:VerticalLayout>
+			<l:HorizontalLayout
+				allowWrapping="true"
+				class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"
+				content="{path:'website', templateShareable:false}">
+				<Button
+					class="sapUiTinyMarginEnd"
+					type="Ghost"
+					text="{text}"
+					press=".onPressInfo(${url})"/>
+			</l:HorizontalLayout>
+			<l:Grid defaultSpan="XL4 L4 M12 S12"
+					position="Center"
+					class="sc-text--align-center sc-image-gallery"
+					content="{path:'imageURL', length:3, templateShareable:false}">
+				<Image
+					src="{
+						path: 'url',
+						formatter: '.formatter.getSmallImage'
+					}"
+					decorative="false"
+					densityAware="false"
+					class="sc-image-gallery__item sapUiTinyMarginBottom">
+					<detailBox>
+						<LightBox >
+							<LightBoxItem
+								imageSrc="{
+									path: 'url',
+									formatter: '.formatter.getLargeImage'
+								}"
+								title="{title}">
+							</LightBoxItem>
+						</LightBox>
+					</detailBox>
+				</Image>
+			</l:Grid>
+			<layoutData>
+				<l:GridData span="XL8 L8 M6 S12"/>
+			</layoutData>
+		</Panel>
+		</l:Grid>
+</core:FragmentDefinition>

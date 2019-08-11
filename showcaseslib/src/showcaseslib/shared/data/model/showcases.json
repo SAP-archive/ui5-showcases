@@ -1,0 +1,482 @@
+{
+	"showcases": [
+		{
+			"title": "SAP Sports One",
+			"teaser": "",
+			"author": "SAP",
+			"classification": "public",
+			"description": "Available for soccer, ice hockey, basketball, handball, skiing, and rugby, SAP Sports One software helps clubs and organizations digitalize sports performance and team management.",
+			"usage": "The Web apps provided by SAP Sports One are built with SAPUI5, using a custom theme on top of the Base theme. Data coming from a SAP HANA XS backend are bound to the UI via JSON model.",
+			"image": {
+				"url": "sap_sports_one_04.png",
+				"text": "...",
+				"device": "desktop"
+			},
+			"devices": [
+				"desktop",
+				"tablet"
+			],
+			"imageURL": [
+				{
+					"url": "sap_sports_one_01.jpg",
+					"text": "..."
+				},
+				{
+					"url": "sap_sports_one_12.jpg",
+					"text": "..."
+				},
+				{
+					"url": "sap_sports_one_09.jpg",
+					"text": "..."
+				},
+				{
+					"url": "sap_sports_one_03.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_sports_one_04.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_sports_one_05.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_sports_one_11.jpg",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://www.sap.com/products/sports-one.html",
+					"type": "Info",
+					"text": "Product Info"
+				},
+				{
+					"url": "https://www.youtube.com/watch?v=D8sUqoM2SD8",
+					"type": "Video",
+					"text": "Video"
+				}
+			]
+		},
+		{
+			"title": "SAP Digital Boardroom",
+			"teaser": "",
+			"author": "SAP",
+			"classification": "public",
+			"description": "SAP Digital Boardroom gives decision makers a real-time, digital-enterprise experience. It integrates with line-of-business data to provide a single source of truth for most important business metrics.",
+			"usage": "",
+			"image": {
+				"url": "sap_dibo_05.png",
+				"text": "",
+				"device": "desktop"
+			},
+			"devices": [
+				"desktop",
+				"tablet",
+				"phone"
+			],
+			"imageURL": [
+				{
+					"url": "sap_dibo_10.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_dibo_11.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_dibo_09.png",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://www.sap.com/products/board-room.html",
+					"type": "Info",
+					"text": "Product Info"
+				}
+			]
+		},
+		{
+			"title": "SAP Business ByDesign (ByD)",
+			"teaser": "",
+			"author": "SAP",
+			"classification": "public",
+			"description": "SAP Business ByDesign is an all-encompassing cloud ERP solution with built-in analytics and an extension platform for partners hosted by SAP, delivered as-a-Service targeting mid-market businesses.",
+			"usage": "ByD UIs are modelled screens similar to SAP Fiori elements, interpreted at runtime by the Oberon framework. The Oberon framework is based on SAPUI5 extending Core models and binding concepts.",
+			"image": {
+				"url": "sap_business_by_design_01.jpg",
+				"text": "...",
+				"device": "desktop"
+			},
+			"devices": [
+				"desktop",
+				"tablet",
+				"phone"
+			],
+			"imageURL": [
+				{
+					"url": "sap_business_by_design_02.jpg",
+					"text": "..."
+				},
+				{
+					"url": "sap_business_by_design_03.jpg",
+					"text": "..."
+				},
+				{
+					"url": "sap_business_by_design_04.jpg",
+					"text": "..."
+				},
+				{
+					"url": "sap_business_by_design_05.jpg",
+					"text": "..."
+				},
+				{
+					"url": "sap_business_by_design_06.jpg",
+					"text": "..."
+				},
+				{
+					"url": "sap_business_by_design_01.jpg",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://www.sap.com/products/business-bydesign.html",
+					"type": "Info",
+					"text": "Product Info"
+				},
+				{
+					"url": "https://www.youtube.com/watch?v=gjkcJf6RFmg",
+					"type": "Video",
+					"text": "Video"
+				}
+			]
+		},
+		{
+			"title": "SAP Customer Engagement Center on SAP Cloud Platform",
+			"teaser": "",
+			"author": "SAP Hybris",
+			"classification": "public",
+			"description": "SAP Customer Engagement Center offers a unified agent desktop with built-in communication channels, ticketing and visibility into customer data and interaction history.",
+			"usage": "For the UI SAPUI5 was explicitly chosen to leverage SAPUI5's standard development procedures, rich enterprise readiness and richness of enterprise controls.",
+			"image": {
+				"url": "sap_service_engagement_center_05.png",
+				"text": "...",
+				"device": "desktop"
+			},
+			"devices": [
+				"desktop",
+				"tablet"
+			],
+			"imageURL": [
+				{
+					"url": "sap_service_engagement_center_02.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_service_engagement_center_01.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_service_engagement_center_03.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_service_engagement_center_04.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_service_engagement_center_05.png",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://www.sap.com/products/hybris-service-engagement-center.html",
+					"type": "Info",
+					"text": "Product Info"
+				}
+			]
+		},
+		{
+			"title": "SAP Connected Health Platform",
+			"teaser": "",
+			"author": "SAP",
+			"classification": "public",
+			"description": "The SAP Connected Health platform serves as a platform for processing and real-time analysis of large amounts of medical data from various sources in a single system.",
+			"usage": "SAP Health uses SAPUI5 due to its high integration with other SAP components like SAP HANA XS and its uniform look & feel across different applications.",
+			"image": {
+				"url": "sap_connected_health_02.png",
+				"text": "...",
+				"device": "desktop"
+			},
+			"devices": [
+				"desktop"
+			],
+			"imageURL": [
+				{
+					"url": "sap_connected_health_03.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_connected_health_04.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_connected_health_05.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_connected_health_06.png",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://www.sap.com/industries/healthcare.html",
+					"type": "Info",
+					"text": "Product Info"
+				},
+				{
+					"url": "https://help.sap.com/viewer/p/SAP_CONNECTED_HEALTH_PLATFORM",
+					"type": "Docu",
+					"text": "Documentation"
+				}
+			]
+		},
+		{
+			"title": "SAP Medical Research Insights",
+			"teaser": "",
+			"author": "internal",
+			"classification": "public",
+			"description": "SAP Medical Research Insights is a clinical analytics solution running on the SAP Connected Health platform that allows for interactive analysis of medical data.",
+			"usage": "For healthcare-specific use-cases, custom controls are used for providing visualizations and improvements for clinicians while keeping the integration with the SAPUI5 components.",
+			"image": {
+				"url": "sap_medical_research_01.png",
+				"text": "...",
+				"device": "desktop"
+			},
+			"devices": [
+				"desktop"
+			],
+			"imageURL": [
+				{
+					"url": "sap_medical_research_02.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_medical_research_03.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_medical_research_04.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_medical_research_05.png",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://www.sap.com/industries/healthcare.html",
+					"type": "Info",
+					"text": "Product Info"
+				},
+				{
+					"url": "https://help.sap.com/viewer/p/SAP_MEDICAL_RESEARCH_INSIGHTS",
+					"type": "Docu",
+					"text": "Documentation"
+				}
+			]
+		},
+		{
+			"title": "Predictive Factory",
+			"teaser": "",
+			"author": "SAP",
+			"classification": "public",
+			"description": "Predictive Factory is a thin-client, Web server-based application that lets you automate the management of predictive models created in SAP Predictive Analytics.",
+			"usage": "The Web app is based on SAPUI5 and, above all, utilizes the sap.m library to get responsive behavior out of the box. The JAVA back-end communicates with the UI using JSON-RPC or OData as protocol.",
+			"image": {
+				"url": "sap_predictive_factory_11.png",
+				"text": "...",
+				"device": "desktop"
+			},
+			"devices": [
+				"desktop",
+				"tablet",
+				"phone"
+			],
+			"imageURL": [
+				{
+					"url": "sap_predictive_factory_04.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_predictive_factory_05.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_predictive_factory_06.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_predictive_factory_07.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_predictive_factory_08.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_predictive_factory_12.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_predictive_factory_13.png",
+					"text": "..."
+				},
+				{
+					"url": "sap_predictive_factory_11.png",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://www.youtube.com/watch?v=0m3gt8ZJnJc",
+					"type": "Demo",
+					"text": "Demo"
+				}
+			]
+		},
+		{
+			"title": "SAP Web IDE",
+			"teaser": "",
+			"author": "SAP",
+			"classification": "public",
+			"description": "SAP Web IDE is a powerful, extensible, web-based, and integrated development tool that simplifies the end-to-end development of SAPUI5 apps.",
+			"usage": "",
+			"image": {
+				"url": "sap_webide_01.jpg",
+				"text": "...",
+				"device": "desktop"
+			},
+			"devices": [
+				"desktop"
+			],
+			"imageURL": [
+				{
+					"url": "sap_webide_02.jpg",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://cloudplatform.sap.com/capabilities/product-info.SAP-Web-IDE.9e5c9d90-e8e0-4e82-aed2-09087a10c973.html",
+					"type": "Info",
+					"text": "Product Info"
+				}
+			]
+		},
+		{
+			"title": "Schoenmaatjes Project",
+			"author": "Edukans",
+			"classification": "public",
+			"teaser": "",
+			"description": "The Schoenmaatjes project sends shoeboxes of toys and supplies packed by kids in the Netherlands to children in developing countries.",
+			"usage": "The project Web app built with SAPUI5 is designed to move kids easily through the registration process of the box including a personal greeting and a picture to their peer on a mobile device.",
+			"image": {
+				"url": "edukans_app_pic_age_13.png",
+				"text": "...",
+				"device": "tablet"
+			},
+			"devices": [
+				"tablet",
+				"phone"
+			],
+			"imageURL": [
+				{
+					"url": "edukans_app_pic_background_14.png",
+					"text": "..."
+				},
+				{
+					"url": "edukans_app_pic_16.png",
+					"text": "..."
+				},
+				{
+					"url": "edukans_app_great_job_20.png",
+					"text": "..."
+				},
+				{
+					"url": "edukans_app_pic_age_13.png",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://schoenmaatjes.nl/",
+					"type": "Info",
+					"text": "Website"
+				},
+				{
+					"url": "https://www.youtube.com/watch?v=EsgnYTfuV7k",
+					"type": "Info",
+					"text": "Video"
+				}
+			]
+		},
+		{
+			"title": "HR Launchpad (ESS/MSS)",
+			"author": "Sovanta",
+			"classification": "public",
+			"teaser": "",
+			"description": "This modern and intuitive usable cross-platform app for retail personnel enables digital access to ESS/MSS scenarios via private devices.",
+			"usage": "Based on SAPUI5 the Web app utilizes sap.ui.core, sap.m, sap.ui.layout plus custom controls partially build upon existing controls. For communication with the back-end OData  and the OData V2 model is used.",
+			"image": {
+				"url": "ess_sovanta_1.png",
+				"text": "...",
+				"device": "desktop"
+			},
+			"devices": [
+				"desktop",
+				"tablet",
+				"phone"
+			],
+			"imageURL": [
+				{
+					"url": "ess_sovanta_5.png",
+					"text": "..."
+				},
+				{
+					"url": "ess_sovanta_4.png",
+					"text": "..."
+				},
+				{
+					"url": "ess_sovanta_6.png",
+					"text": "..."
+				},
+				{
+					"url": "ess_sovanta_2.png",
+					"text": "..."
+				},
+				{
+					"url": "ess_sovanta_3.png",
+					"text": "..."
+				},
+				{
+					"url": "ess_sovanta_1.png",
+					"text": "..."
+				}
+			],
+			"website": [
+				{
+					"url": "https://sovanta.com/?p=referenz-projekte/launchpad-ess-mss",
+					"type": "Info",
+					"text": "Project Info"
+				}
+			]
+		}
+	]
+}

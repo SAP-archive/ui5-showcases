@@ -1,0 +1,82 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:cs="showcaseslib.shared.control">
+	<l:Grid defaultSpan="XL4 L4 M6 S12">
+		<Panel class="sc-text--align-center">
+				<cs:FrameImage src="{/image/url}" device="{/image/device}">
+					<cs:detailBox>
+						<LightBox>
+							<LightBoxItem
+								imageSrc="{/image/url}"
+								alt="{/image/text}"
+								title="{/title}">
+							</LightBoxItem>
+						</LightBox>
+					</cs:detailBox>
+				</cs:FrameImage>
+			<l:HorizontalLayout content="{/devices}">
+				<Image
+					src="{path:'', formatter:'.formatter.supportedDeviceUrl'}"
+					decorative="false"
+					visible="true"
+					densityAware="false"
+					class="DeviceImages"/>
+			</l:HorizontalLayout>
+		</Panel>
+		<Panel class="DetailsBox">
+			<l:VerticalLayout width="100%">
+				<Title
+					text="{/title}"
+					level="H2"
+					titleStyle="H2"
+					class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"/>
+				<Title
+					text="{/author}"
+					level="H6"
+					titleStyle="H6"
+					class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"/>
+				<Text
+					class="showcaseDetailsText sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"
+					text="{path:'/description', formatter:'.formatter.defaultDescriptionText'}"/>
+				<Text
+					class="showcaseDetailsText sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"
+					text="{/usage}"/>
+			</l:VerticalLayout>
+			<l:HorizontalLayout
+				allowWrapping="true"
+				class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"
+				content="{/website}">
+				<Button
+					class="sapUiTinyMarginEnd"
+					type="Ghost"
+					text="{text}"
+					press=".onPressInfo(${url})"
+					visible="{= ${text}.length > 0 }"/>
+			</l:HorizontalLayout>
+			<l:Grid defaultSpan="XL4 L4 M12 S12"
+				position="Center"
+				content="{path:'/imageURL', templateShareable:false}">
+				<Image
+					src="{url}"
+					visible="{= ${url}.length > 0 }"
+					decorative="false"
+					densityAware="false"
+					class="sc-image-gallery__item sapUiTinyMarginBottom">
+					<detailBox>
+						<LightBox>
+							<LightBoxItem
+								imageSrc="{path: 'url', formatter: '.formatter.formatPicture'}"
+								title="{/title}">
+							</LightBoxItem>
+						</LightBox>
+					</detailBox>
+				</Image>
+			</l:Grid>
+			<layoutData>
+				<l:GridData span="XL8 L8 M6 S12"/>
+			</layoutData>
+		</Panel>
+	</l:Grid>
+</core:FragmentDefinition>

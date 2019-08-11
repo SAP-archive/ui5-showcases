@@ -1,0 +1,60 @@
+# Ignore .gitignore, target and tmp folders
+src/*/.gitignore
+src/*/target/
+/target
+/tmp
+
+# Ignore default target directory for the npm package 'ui5-codecompletion'
+.ui5
+
+# Ignore Eclipse project and settings files
+.classpath
+.settings
+.project
+.externalToolBuilders
+
+# Ignore IntelliJ project and settings files
+.idea
+*.iml
+
+# Ignore temp folders
+grunt/bin
+
+# Ignore npm files/folders
+node_modules
+application/node_modules
+npm-debug.log
+
+# Ignore bower folder
+bower_components
+
+# Ignore Mac files
+.DS_Store
+
+# Ignore Visual Studio project and settings files
+*.sln
+*.suo
+web.config
+/.user.project.json
+/sap-ui-cachebuster-info.json
+
+# Ignore Visual Studio Code project and settings files
+.vscode/
+
+# Ignore yarn files
+yarn.lock
+*yarn
+
+# Ignore documentation artifacts
+src/testsuite/src/main/webapp/documentation-config.js
+src/testsuite/src/main/webapp/docs/
+src/sap.ui.documentation/src/sap/ui/documentation/sdk/model/data/guide/
+
+# Ignore default target directory for the npm package 'ui5-schemas'
+.tmp
+
+# Ignore build relevant folders
+dist
+deploy_run.sh
+yarn-error.log
+package-lock.json

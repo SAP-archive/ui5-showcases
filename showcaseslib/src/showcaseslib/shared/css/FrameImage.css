@@ -1,0 +1,148 @@
+.sc-frameimage {
+	position: relative;
++	margin: 10px;
+}
+
+.sc-frameimage__content {
+	max-width: 450px;
+	margin: 0 auto;
+	padding: 0.5rem;
+	/*padding-top: 81%;*/
+}
+
+.sc-frameimage__content > .sapMLightBoxImage {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+
+.sc-frameimage__frame {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+.sc-frameimage__frame::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.sc-frameimage__content--tablet > .sc-frameimage__frame::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 80%;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+
+.sc-frameimage__image {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+.sc-frameimage__frame--tablet> .sc-frameimage__image {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top;
+}
+
+/* ~~~~~~~ desktop classes ~~~~~~~ */
+.sc-frameimage--desktop {
+	padding-top: 81%;
+}
+
+.sc-frameimage__frame--desktop::before ,
+.sc-frameimage__content--desktop > .sapMLightBoxImage {
+	padding-top: 81%;
+}
+
+.sc-frameimage__frame--desktop {
+	padding: 7% 3.7% 22.8% 3.7%;
+}
+
+.sc-frameimage__frame--desktop::before {
+	background-image: url(../data/XL_front_print.png);
+}
+
+/* ~~~~~~~ tablet classes ~~~~~~~ */
+.sc-frameimage--tablet {
+	padding-top: 81%;
+}
+.sc-frameimage__content--tablet > .sc-frameimage__frame--tablet::before,
+.sc-frameimage__frame--tablet::before,
+.sc-frameimage__content--tablet > .sapMLightBoxImage {
+	padding-top: 79%;
+	margin: 0 auto;
+	margin-left: 3.3%;
+}
+
+.sc-frameimage__content--tablet {
+	max-width: 400px;
+}
+
+.sc-frameimage__frame--tablet {
+	padding: 4.4% 42% 10% 6.5%;
+}
+
+.sc-frameimage__frame--tablet::before {
+	background-image: url(../data/M_front_portrait_print.png);
+}
+
+/* ~~~~~~~ laptop classes ~~~~~~~ */
+.sc-frameimage--laptop {
+	padding-top: 60%;
+}
+
+.sc-frameimage__frame--laptop::before,
+.sc-frameimage__content--laptop > .sapMLightBoxImage {
+	padding-top: 81%;
+}
+
+.sc-frameimage__frame--laptop {
+	padding: 7% 3.7% 22% 3.7%;
+}
+
+.sc-frameimage__frame--laptop {
+	padding: 3.5% 12% 7% 12%;
+}
+
+.sc-frameimage__frame--laptop::before {
+	background-image: url(../data/L_front_print.png);
+}
+
+/* ~~~~~~~~ LightBox magnifier ~~~~~~~~~ */
+.sc-frameimage__content .sapMLightBoxMagnifyingGlass {
+	z-index: 1;
+	right: 0;
+	margin: 3px;
+}
+
+.sc-frameimage__content--desktop .sapMLightBoxMagnifyingGlass {
+	bottom: 16%;
+}
+
+.sc-frameimage__content--laptop .sapMLightBoxMagnifyingGlass {
+	bottom: 2%;
+	right: 9%;
+}
+
+.sc-frameimage__content--tablet .sapMLightBoxMagnifyingGlass {
+	bottom: 2%;
+	right: 3%;
+}

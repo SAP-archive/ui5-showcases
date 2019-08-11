@@ -1,0 +1,21 @@
+language: node_js # don't install any environment
+
+node_js:
+  - "8"
+
+install:
+  - set -e
+  - cd application showcaseslib
+  - npm install
+  - cd ../application
+  - npm install
+script:
+  - npm run test
+  - npm run build
+  - cd ..
+deploy:
+  provider: script
+  script: ./bin/deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master

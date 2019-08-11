@@ -1,0 +1,54 @@
+.sc-overview-page__header-text {
+    color:white;
+    z-index: 1;
+    font-size: 1.25rem;
+}
+
+.sc-overview-page__content > .sapMPageEnableScrolling {
+      height: fit-content;
+}
+
+.sc-overview-page__content  {
+    background-size: cover;
+    text-align: center;
+    position:relative;
+    background: url("../../data/BackgroundImage.png"), linear-gradient(to bottom, #16435F, #358FB2);
+}
+
+.sc-overview-page__content:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    background-color: rgba(	63,80,96, 0.5);
+}
+
+.sc-overview-page__carousel {
+    background-color: white;
+    width: auto !important;
+    z-index: 1;
+    border-radius: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.sc-showcase__details-box {
+    text-align: left;
+    margin-top: 2rem;
+}
+
+.sc-showcase__description {
+    font-size: 1rem;
+    padding-top: 10px;
+    padding-right: 60px;
+}
+
+.sc-showcase__details-button {
+    width: 120px;
+}
+.sc-overview-page .sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border-bottom: 0px solid ;
+}

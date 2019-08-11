@@ -1,0 +1,46 @@
+<mvc:View
+	controllerName="showcaseslib.showcasePage.controller.App"
+	displayBlock="true"
+	height="100%"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout"
+	xmlns:uxap="sap.uxap">
+	<App
+		class="sc-detail-page"
+		id="app">
+		<Page
+			id="page"
+			showHeader="false">
+			<Button id="testButton" icon="sap-icon://full-screen" press=".onPressButtonStartFullScreen" class="startPresentationButton sapContrast sapContrastPlus"/>
+			<Button id="contributionButton" icon="sap-icon://add-photo" press=".onContribute" class="navToContributionButton sapContrast sapContrastPlus"/>
+			<uxap:ObjectPageLayout
+				navigate="onSectionChange"
+				showAnchorBarPopover="true"
+				class="Background"
+				sections="{/showcases}"
+				id="objectPageLayout"
+				upperCaseAnchorBar="false" >
+				<uxap:sections>
+					<uxap:ObjectPageSection
+						showTitle="false"
+						class="Background"
+						title="{title}">
+						<uxap:subSections>
+							<uxap:ObjectPageSubSection title="">
+								<uxap:blocks>
+									<l:VerticalLayout width="100%" >
+											<core:Fragment
+												fragmentName="showcaseslib.showcasePage.view.Showcase"
+												type="XML"/>
+									</l:VerticalLayout>
+								</uxap:blocks>
+							</uxap:ObjectPageSubSection>
+						</uxap:subSections>
+					</uxap:ObjectPageSection>
+				</uxap:sections>
+			</uxap:ObjectPageLayout>
+		</Page>
+	</App>
+</mvc:View>

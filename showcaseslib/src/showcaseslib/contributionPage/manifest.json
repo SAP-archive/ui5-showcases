@@ -1,0 +1,76 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "showcaseslib.contributionPage",
+		"type": "component",
+		"embeddedBy" : "../",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "CA-UI5-FST"
+	},
+
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+
+	"sap.ui5": {
+		"componentName" : "showcaseslib.contributionPage",
+		"rootView": {
+			"viewName": "showcaseslib.contributionPage.view.Contribute",
+			"type": "XML",
+			"async": true,
+			"id": "contributeView"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.ui.unified": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "showcaseslib.showcase.i18n.i18n"
+				}
+			},
+			"": {
+				"uri": "../shared/data/model/showcases.json",
+				"type": "sap.ui.model.json.JSONModel",
+				"preload": true
+			}
+		},
+		"resources": {
+			"css": [
+				{"uri": "css/style.css"},
+				{"uri": "../shared/css/FrameImage.css"},
+				{"uri": "../shared/css/common.css"}
+			]
+		}
+	}
+}
