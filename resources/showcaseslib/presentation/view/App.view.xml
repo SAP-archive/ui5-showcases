@@ -1,0 +1,60 @@
+<mvc:View
+	controllerName="showcaseslib.presentation.controller.App"
+	displayBlock="true"
+	height="100%"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc">
+	<App id="app">
+		<Page id="presentationPage"
+			showHeader="false">
+			<FlexBox id="flexboxButtons" class="flexboxButtons">
+				<Button id="buttonReset"
+					tooltip="Stop Presentation"
+					icon="sap-icon://reset"
+					press=".onPressButtonResetPresentation"
+					class="buttonTogglePresentation sapMContrastPlus"/>
+				<Button id="buttonToggle"
+					tooltip="Toggle Presentation"
+					icon="sap-icon://play"
+					press=".onPressButtonTogglePresentation"
+					class="buttonTogglePresentation sapMContrastPlus"/>
+				<Button id="buttonExit"
+					tooltip="Exit Fullscreen"
+					icon="sap-icon://exit-full-screen"
+					press=".onPressButtonEndFullScreen"
+					class="buttonExitFullScreen sapMContrastPlus"/>
+			</FlexBox>
+			<Carousel id="carouselPresentation"
+				loop="true" pages="{path: '/showcases'}"
+				showPageIndicator="false" pageChanged=".onPageChanged"
+				class="carouselPresentation">
+				<FlexBox class="flexboxShowcase"
+					direction="Column">
+					<FlexBox class="flexboxImages"
+						items="{path: 'imageURL', templateShareable:false}">
+						<items>
+							<Image src="{path: 'url', formatter: '.formatter.getLargeImage'}"
+								class="imageFullscreen"
+								mode="Background"
+								backgroundPosition="center 0%"
+								backgroundSize="100%"
+								densityAware="false"/>
+							</items>
+					</FlexBox>
+					<FlexBox class="flexboxTitleAndTeaser"
+						direction="Column"
+						alignItems="Center">
+						<Text text="{title}"
+							class="title"
+							wrapping="false"
+							textAlign="Center"/>
+						<Text text="{usage}"
+							class="teaser"
+							wrapping="false"
+							textAlign="Center"/>
+					</FlexBox>
+				</FlexBox>
+			</Carousel>
+		</Page>
+	</App>
+</mvc:View>

@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2019 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/base/ManagedObject","sap/ui/dom/units/Rem","sap/base/Log"],function(e,t,r){"use strict";function i(e){if(e===0||e==="0"){return 0}var i=e.match(/^(\d+(\.\d+)?)(px|rem)$/),n;if(i){if(i[3]==="px"){n=parseFloat(i[1])}else{n=t.toPx(parseFloat(i[1]))}}else{r.error("Css size '"+e+"' is not supported for GridContainer. Only 'px' and 'rem' are supported.");n=NaN}return Math.ceil(n)}var n=e.extend("sap.f.GridContainerSettings",{metadata:{library:"sap.f",properties:{columns:{type:"int"},columnSize:{type:"sap.ui.core.CSSSize",defaultValue:"80px"},rowSize:{type:"sap.ui.core.CSSSize",defaultValue:"80px"},gap:{type:"sap.ui.core.CSSSize",defaultValue:"16px"}}}});n.prototype.getColumnSizeInPx=function(){return i(this.getColumnSize())};n.prototype.getRowSizeInPx=function(){return i(this.getRowSize())};n.prototype.getGapInPx=function(){return i(this.getGap())};n.prototype.getComputedColumnsCount=function(e){if(this.getColumns()){return this.getColumns()}var t=this.getGapInPx(),r=this.getColumnSizeInPx();return Math.floor((e+t)/(r+t))};n.prototype.calculateRowsForItem=function(e){var t=this.getGapInPx(),r=this.getRowSizeInPx();return Math.ceil((e+t)/(r+t))};return n});

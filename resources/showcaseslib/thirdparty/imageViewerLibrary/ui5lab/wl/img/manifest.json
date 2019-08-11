@@ -1,0 +1,45 @@
+{
+  "_version": "1.9.0",
+  "sap.app": {
+    "id": "ui5lab.wl.img",
+    "type": "library",
+    "embeds": [],
+    "applicationVersion": {
+      "version": "1.0.0"
+    },
+    "title": "UI5 library: ui5lab.wl.img",
+    "description": "UI5 library: ui5lab.wl.img",
+    "resources": "resources.json",
+    "offline": true
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "supportedThemes": [
+      "base",
+      "sap_belize",
+      "sap_belize_plus",
+      "sap_hcb"
+    ]
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.68",
+      "libs": {
+        "sap.ui.core": {
+          "minVersion": "1.68.1"
+        }
+      }
+    },
+    "library": {
+      "i18n": false,
+      "content": {
+        "controls": [
+          "ui5lab.wl.img.ImageViewer"
+        ],
+        "elements": [],
+        "types": [],
+        "interfaces": []
+      }
+    }
+  }
+}

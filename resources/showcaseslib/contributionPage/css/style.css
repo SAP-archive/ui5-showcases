@@ -1,0 +1,110 @@
+/* app styles */
+
+.DetailsBox {
+    background:white;
+    border-radius: 5px;
+    min-height: 23rem;
+}
+.DetailsBox.sapMPanel > .sapMPanelContent {
+    padding: 20px 10px 0px 10px;
+}
+.DetailsBoxInner.sapMPanel > .sapMPanelHdr {
+    padding: 0px;
+    font-size: 18px;
+    height: 18px;
+    line-height: 1em;
+}
+.DetailsBoxInner.sapMPanel > .sapMPanelContent {
+    padding: 20px 0px 0px 0px;
+    font-size: 12px;
+}
+.sapMPanel > .sapMPanelBGTranslucent.sapMPanelContent {
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+.URLButtonPanel {
+    min-height:5.5rem;
+    margin-left: -1rem;
+}
+
+.DeviceImages {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    margin-top: 1.5rem;
+}
+.sapMPanelContent:not(.sapMPanelBGTransparent) {
+    border-bottom: 0px solid !important;
+}
+.sapUxAPObjectPageSectionHeader {
+    border-bottom: 0px solid !important;
+}
+html.sap-desktop .sapContrastPlus .sapUxAPHierarchicalSelect.sapMSltHoverable, html.sap-desktop .sapContrastPlus.sapUxAPHierarchicalSelect.sapMSltHoverable {
+    visibility: hidden;
+}
+
+.sapContrastPlus.sapUxAPAnchorBar.sapMTB, .sapContrastPlus .sapUxAPAnchorBar.sapMTB {
+    box-shadow: inset 0 0rem;
+}
+.sapContrastPlus.sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight, .sapContrastPlus .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight, html[dir=rtl] .sapContrastPlus .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft, html[dir=rtl] .sapContrastPlus.sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft {
+    box-shadow: inset 0 0rem;
+}
+.sapContrastPlus.sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft, .sapContrastPlus .sapUxAPAnchorBar.sapUxAPAnchorBarScrollLeft .anchorBarArrowLeft, html[dir=rtl] .sapContrastPlus .sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight, html[dir=rtl] .sapContrastPlus.sapUxAPAnchorBar.sapUxAPAnchorBarScrollRight .anchorBarArrowRight{
+    box-shadow: inset 0 0rem;
+}
+html:not(.sapUiTheme-sap_hcb):not(.sapUiTheme-sap_hcw):not(.sapUiTheme-sap_belize_hcb):not(.sapUiTheme-sap_belize_hcw)
+.sapContrastPlus.sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnContent, .sapContrastPlus .sapUxAPAnchorBarButton.sapUxAPAnchorBarButtonSelected .sapMBtnContent{
+    border-bottom: 0.125rem solid white;
+}
+.sapUxAPBlockContainerDesktop {
+    margin-top:5%;
+    padding: 1rem 2rem 0rem 0rem;
+}
+.sapMPanel > .sapMPanelHdr, .sapMPanelWrappingDiv, .sapMPanelWrappingDivTb {
+    border-bottom: 0px solid ;
+}
+.sapMPanelHdr {
+    font-weight:bold;
+    font-size:1.5rem;
+}
+.sc-detail-page .showcaseDetailsText {
+    font-size:1rem;
+}
+.sc-detail-page .showcaseDetailsLink {
+    font-size:1rem;
+    margin-top: 2rem;
+}
+html.sap-desktop .sapMShellAppWidthLimited .sapMShellCentralBox {
+    background-color: transparent ;
+}
+.sapUiGlobalBackgroundColor, .sapMShellGlobalInnerBackground {
+    background-color: transparent ;
+}
+.sapUxAPObjectPageContainer, .sapUxAPObjectPageContainer + div, .sapUxAPObjectPageHeaderDetailsHidden {
+    background-color: transparent ;
+}
+
+.sc-detail-page .sapMLightBoxImage .sapMLightBoxMagnifyingGlass {
+     background-color: transparent;
+     font-size: 0;
+}
+
+/* fix missing height on fixFlex control to properly display input fields */
+.fixInputInFixFlex {
+    height: 3rem;
+    height: 3rem;
+}
+.showcaseRibbon {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    margin-right: 2rem;
+    margin-top: 0rem;
+}
+.almostDoneText {
+    font-weight: bold;
+    font-size: 15px;
+}
+.thankYouText {
+    font-size: 18px;
+}

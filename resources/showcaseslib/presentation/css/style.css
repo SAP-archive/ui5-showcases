@@ -1,0 +1,83 @@
+.imageFullscreen{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.title {
+    font-size: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.teaser {
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: calc(100% - 4rem);
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.flexboxShowcase {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+.buttonTogglePresentation {
+    margin-top: 0.75rem;
+    margin-left: 0.75rem;
+}
+.buttonExitFullScreen {
+    margin-top: 0.75rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+.flexboxImages>.sapMFlexBoxBGTransparent.sapMFlexItem.sapMFlexItemAlignAuto>.imageFullscreen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+.flexboxButtons {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+.flexboxTitleAndTeaser {
+    width: 100%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    background: linear-gradient(to bottom, #16435F, #358FB2);
+    justify-content: center;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+}
+.carouselPresentation>.sapMCrslControlsBottom.sapMCrslControls {
+    background-color: black;
+}
+.carouselPresentation {
+    background-color: black;
+}
+
+/* don't hide next page while animating - we already want to see the next image */
+.carouselPresentation .sapMCrslItem {
+    visibility: visible !important;
+}
+
+.flexboxTitleAndTeaser>.sapMFlexBoxBGTransparent.sapMFlexItem.sapMFlexItemAlignAuto {
+    max-width: 100%;
+}
+
+.flexboxImages {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+span.sapMImg.imageFullscreen {
+    display: none;
+}

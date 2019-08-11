@@ -1,0 +1,50 @@
+{
+	"name": "sap.ui5.showcaseApp",
+	"version": "1.0.0",
+	"buildTimestamp": "201908111311",
+	"scmRevision": "",
+	"libraries": [
+		{
+			"name": "sap.m",
+			"version": "1.68.1",
+			"buildTimestamp": "201908111311",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.f",
+			"version": "1.68.1",
+			"buildTimestamp": "201908111311",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.core",
+			"version": "1.68.1",
+			"buildTimestamp": "201908111311",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.layout",
+			"version": "1.68.1",
+			"buildTimestamp": "201908111311",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.ui.unified",
+			"version": "1.68.1",
+			"buildTimestamp": "201908111311",
+			"scmRevision": ""
+		},
+		{
+			"name": "sap.uxap",
+			"version": "1.68.1",
+			"buildTimestamp": "201908111311",
+			"scmRevision": ""
+		},
+		{
+			"name": "showcaseslib",
+			"version": "1.0.0",
+			"buildTimestamp": "201908111311",
+			"scmRevision": ""
+		}
+	]
+}

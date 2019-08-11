@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2019 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/thirdparty/jquery","sap/ui/core/delegate/ItemNavigation","sap/base/assert","sap/ui/dom/containsOrEquals","sap/ui/events/KeyCodes"],function(t,e,a,i,n){"use strict";var o=e.extend("sap.m.HeaderContainerItemNavigator");o.prototype._callParent=function(t,a){if(typeof e.prototype[t]==="function"){e.prototype[t].apply(this,a)}};o.prototype.onsaphome=function(t){if(this._skipNavigation(t)){return}this._callParent("onsaphome",arguments)};o.prototype.onsapend=function(t){if(this._skipNavigation(t)){return}this._callParent("onsapend",arguments)};o.prototype.onsapnext=function(t){if(this._skipNavigation(t)){return}this._callParent("onsapnext",arguments)};o.prototype.onsapprevious=function(t){if(this._skipNavigation(t,true,false)){return}this._callParent("onsapprevious",arguments)};o.prototype._skipNavigation=function(t){return Array.prototype.indexOf.call(this.aItemDomRefs,t.target)===-1};return o});

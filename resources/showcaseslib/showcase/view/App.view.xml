@@ -1,0 +1,53 @@
+<mvc:View
+	controllerName="showcaseslib.showcase.controller.App"
+	displayBlock="true"
+	height="100%"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:cs="showcaseslib.shared.control"
+	class="sc-overview-page">
+	<VBox id="ContentBox" class="sc-overview-page__content">
+		<Title
+			text="Showcases"
+			level="H2"
+			titleStyle="H2"
+			class="sapUiLargeMarginBeginEnd sapUiMediumMarginTopBottom sc-overview-page__header-text"/>
+		<Carousel
+			showPageIndicator="false"
+			class="sapUiLargeMarginTopBottom sc-overview-page__carousel"
+			loop="true"
+			pages="{/showcases}"
+			id="welcomeCarousel">
+			<l:Grid defaultSpan="XL5 L5 M6 S12">
+				<Panel class="sapUiNoContentPadding sapUiLargeMarginTop sapUiMediumMarginBottom">
+					<cs:FrameImage
+						src="{
+							path: 'image/url',
+							formatter: '.formatter.getSmallImage'
+						}"
+						device="{image/device}"/>
+				</Panel>
+				<VBox class="sc-showcase__details-box">
+					<Title
+						id="ShowcaseNameText"
+						text="{title}"
+						level="H2"
+						titleStyle="H2"
+						class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"/>
+					<Text
+						class="sc-showcase__description sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"
+						text="{description}" />
+					<Button
+						press=".onDetailsPress"
+						type="Emphasized"
+						text="Details"
+						class="sc-showcase__details-button sapUiSmallMarginBeginEnd sapUiSmallMarginTopBottom"/>
+					<layoutData>
+						<l:GridData span="XL7 L7 M6 S12"/>
+					</layoutData>
+				</VBox>
+			</l:Grid>
+		</Carousel>
+	</VBox>
+</mvc:View>

@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2019 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/ui/core/Control","sap/ui/core/ResizeHandler","./SimpleFixFlexRenderer"],function(e,t){"use strict";var i=e.extend("sap.m.SimpleFixFlex",{metadata:{library:"sap.m",aggregations:{fixContent:{type:"sap.ui.core.Control",multiple:false},flexContent:{type:"sap.ui.core.Control",multiple:false}},properties:{fitParent:{type:"boolean",group:"Appearance",defaultValue:true}}}});i.prototype.onBeforeRendering=function(){this._deregisterFixContentResizeHandler()};i.prototype.onAfterRendering=function(){if(this.getFitParent()){this._registerFixContentResizeHandler()}};i.prototype._registerFixContentResizeHandler=function(){var e=this.getFixContent();if(!this._sResizeListenerId&&e){this._sResizeListenerId=t.register(e.getDomRef(),this._onFixContentResize.bind(this));this._onFixContentResize()}};i.prototype._deregisterFixContentResizeHandler=function(){if(this._sResizeListenerId){t.deregister(this._sResizeListenerId);this._sResizeListenerId=null}};i.prototype._onFixContentResize=function(){var e=this.$(),t=this.getFixContent().$();e.css("padding-top",t.get(0).clientHeight);t.addClass("sapUiSimpleFixFlexFixedWrap")};i.prototype.exit=function(){this._deregisterFixContentResizeHandler()};return i});

@@ -1,0 +1,20 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Popover
+		title="Help"
+		class="sapUiContentPadding"
+		placement="Bottom"
+		contentWidth="20%">
+		<VBox>
+			<Label text="Image device:"/>
+			<Text text="The image device determines the frame of your preview image. Choose a device that your app mainly runs on." class="sapUiSmallMarginBottom"/>
+			<Label text="Preview image:"/>
+			<Text text="The preview image is the most important image of your showcase. It should show an overview of your product." class="sapUiSmallMarginBottom"/>
+			<Label text="Recommended aspect ratio:"/>
+			<Text text="Your picture should be in a horizontal format, unless your image device is a tablet. Any aspect ratio close to 16:9 or 16:10 is fine." class="sapUiSmallMarginBottom"/>
+			<Label text="Recommended resolution:"/>
+			<Text text="A resolution with at least 1280x720 px is nice to see!"/>
+		</VBox>
+	</Popover>
+</core:FragmentDefinition>

@@ -1,0 +1,19 @@
+<mvc:View
+	id="contributeView"
+	controllerName="sap.ui5.showcaseApp.controller.Contribute"
+	displayBlock="true"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<Page
+		id="page"
+		showHeader="true"
+		title="{i18n>contributeTitle}"
+		class="sapUiContentPadding"
+		showNavButton="true"
+		navButtonPress=".onOverview">
+		<core:ComponentContainer height="100%"
+				id="showCasePageComponent"
+				usage="contributionPage"/>
+	</Page>
+</mvc:View>

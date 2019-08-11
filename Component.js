@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/UIComponent","sap/ui/Device","sap/ui5/showcaseApp/model/models"],function(e,t,i){"use strict";return e.extend("sap.ui5.showcaseApp.Component",{metadata:{events:{statusChanged:{}},manifest:"json"},init:function(){e.prototype.init.apply(this,arguments);this.setModel(i.createDeviceModel(),"device");this.getRouter().initialize()}})});

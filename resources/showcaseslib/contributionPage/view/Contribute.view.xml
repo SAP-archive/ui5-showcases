@@ -1,0 +1,304 @@
+<mvc:View
+	controllerName="showcaseslib.contributionPage.controller.Contribute"
+	id="contributeView"
+	height="100%"
+	displayBlock="true"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:l="sap.ui.layout">
+	<!-- Ribbon with custom css-->
+	<Image
+		src="resources/showcaseslib/shared/data/Showcase_Ribbon.png"
+		decorative="false"
+		visible="true"
+		densityAware="false"
+		class="showcaseRibbon"/>
+	<l:FixFlex class="fixFlexVertical">
+		<l:fixContent>
+			<core:Fragment
+				fragmentName="showcaseslib.contributionPage.view.Showcase"
+				type="XML"/>
+		</l:fixContent>
+		<l:flexContent>
+			<NavContainer id="wizardNavContainer">
+				<Page
+					id="contributionWizardPage"
+					showHeader="false"
+					enableScrolling="true">
+					<Wizard id="contributeWizard">
+						<WizardStep id="ShowcaseInfoStep"
+							validated="false"
+							title="Name it">
+							<l:VerticalLayout id="mainVerticalLayout" width="100%">
+								<VBox>
+									<Label id="title_Label" text="Title:" required="true"/> <!-- Title Input-->
+									<Input
+										id="title_Input"
+										type="Text"
+										placeholder="What's your Showcase title?"
+										tooltip="Enter a short title for your showcase"
+										maxLength="70"
+										liveChange=".additionalInfoValidation"
+										valueLiveUpdate="true"
+										valueStateText="Enter a title with up to 70 characters."
+										value="{
+											path : '/title',
+											type : 'sap.ui.model.type.String',
+											constraints : {
+												minLength: 1,
+												maxLength: 70
+											}
+										}"/>
+								</VBox>
+							</l:VerticalLayout>
+							<l:VerticalLayout width="100%">
+								<VBox class="sapUiSmallMarginBottom">
+									<Label text="Company or Author:" required="true"/> <!-- Author Input -->
+									<Input
+										id="author_Input"
+										type="Text"
+										placeholder="Who is the owner?"
+										tooltip="Who is the owner?"
+										maxLength="50"
+										liveChange=".additionalInfoValidation"
+										valueLiveUpdate="true"
+										valueStateText="Enter a company or author with up to 50 characters."
+										value="{
+											path : '/author',
+											type : 'sap.ui.model.type.String',
+											constraints : {
+												minLength: 1,
+												maxLength: 50
+											}
+										}"/>
+									<Label text="Description2:" required="true"/> <!-- Description Input -->
+									<TextArea id="description_TextArea"
+										placeholder="What does your app do?"
+										showExceededText="false"
+										maxLength="500"
+										width="100%"
+										liveChange=".additionalInfoValidation"
+										valueLiveUpdate="true"
+										change=".onChange"
+										tooltip="What does your app do?"
+										valueStateText="Enter a description with up to 500 characters."
+										value="{
+											path : '/description',
+											type : 'sap.ui.model.type.String',
+											constraints : {
+												minLength: 1,
+												maxLength: 500
+											}
+										}"/>
+
+									<Label text="Usage:" required="false"/> <!-- Description Input -->
+									<TextArea id="usage_TextArea"
+										placeholder="How is UI5 used in your app?"
+										showExceededText="false"
+										maxLength="200"
+										width="100%"
+										liveChange=".additionalInfoValidation"
+										valueLiveUpdate="true"
+										change=".onChange"
+										tooltip="How is UI5 used in your app?"
+										valueStateText="Enter a description with up to 200 characters."
+										value="{
+											path : '/usage',
+											type : 'sap.ui.model.type.String',
+											constraints : {
+												minLength: 1,
+												maxLength: 200
+											}
+										}"/>
+								</VBox>
+							</l:VerticalLayout>
+						</WizardStep>
+						<WizardStep id="classificationAndDevicesStep"
+							validated="true"
+							title="Define Scenario">
+							<HBox>
+								<l:VerticalLayout>
+									<Label text="Supported Devices:"
+										required="false"/> <!-- Supported Devices -->
+									<l:HorizontalLayout>
+										<CheckBox id="supportedDevicesDesktop_Checkbox" text="Desktop"
+											select=".onCheckBoxSelected"
+											selected="{= ${/devices}.indexOf('desktop')>=0 }"/>
+										<CheckBox id="supportedDevicesTablet_Checkbox" text="Tablet"
+											select=".onCheckBoxSelected"
+											selected="{= ${/devices}.indexOf('tablet')>=0 }"/>
+										<CheckBox id="supportedDevicesPhone_Checkbox" text="Phone"
+											select=".onCheckBoxSelected"
+											selected="{= ${/devices}.indexOf('phone')>=0 }"/>
+									</l:HorizontalLayout>
+								</l:VerticalLayout>
+							</HBox>
+						</WizardStep>
+						<WizardStep id="imagesStep"
+								validated="false"
+								title="Upload Media"
+								complete=".insertFirstLink">
+							<VBox>
+								<MessageStrip
+										text="SAP takes no responsibility for any of the media, such as images and photos, that you upload into the Showcase App."
+										type="Information"
+										showIcon="true"
+										class="sapUiMediumMarginBottom">
+										<link>
+											<Link text="Read more"
+												  target="_blank"
+												  href="https://gist.github.com/CLAassistant/43a94f93da6edbff295b2ee125db630c" />
+										</link>
+								</MessageStrip>
+								<l:HorizontalLayout>
+									<l:VerticalLayout id="mainImageLayout"
+										class="sapUiSmallMarginEnd"> <!-- Main Image upload -->
+										<Label text="Preview Image:" required="true"/>
+									</l:VerticalLayout>
+									<l:VerticalLayout class="sapUiSmallMarginEnd">
+										<Label text="Image Device:" required="true"/> <!-- Image device -->
+										<RadioButtonGroup columns="3" class="sapUiSmallMarginBottom">
+											<buttons>
+												<RadioButton id="imageDevice_Desktop" text="Desktop"
+													select=".onDeviceSelected"/>
+												<RadioButton id="imageDevice_Laptop" text="Laptop"
+													select=".onDeviceSelected"/>
+												<RadioButton id="imageDevice_Tablet" text="Tablet"
+													select=".onDeviceSelected"/>
+											</buttons>
+										</RadioButtonGroup>
+									</l:VerticalLayout>
+									<Button icon="sap-icon://sys-help" press="showLinkPopover" type="Transparent"
+										class="sapUiSmallMarginTop"/>
+								</l:HorizontalLayout>
+								<l:VerticalLayout width="35%" class="sapUiTinyMarginBottom">
+									<MessageStrip
+										id="resolution_MessageStrip"
+										text="Recommended Image Size: At least 1280x720 px"
+										showIcon="true"
+										showCloseButton="true"
+										class="sapUiMediumMarginBottom"
+										visible="false"
+										type="Warning"/>
+								</l:VerticalLayout>
+								<l:VerticalLayout><!-- Add more Images -->
+									<Title text="Add additional Images:"/>
+									<l:VerticalLayout id="addImages_Layout_1"/>
+									<l:VerticalLayout id="addImages_Layout_2" visible="false"/>
+									<l:VerticalLayout id="addImages_Layout_3" visible="false"/>
+									<l:HorizontalLayout>
+										<Button id="plusImage_Button"
+											icon="sap-icon://add"
+											press=".onImagePlusClicked"
+											type="Ghost"
+											class="sapUiTinyMarginEnd"/>
+										<Button id="minusImage_Button"
+											icon="sap-icon://less"
+											press=".onImageMinusClicked"
+											type="Ghost"
+											visible="false"/>
+									</l:HorizontalLayout>
+								</l:VerticalLayout>
+								<UploadCollection
+										id="UploadCollection"
+										visible="false"/>
+							</VBox>
+						</WizardStep>
+						<WizardStep id="LinksStep"
+							validated="true"
+							title="Add Links">
+
+							<l:VerticalLayout width="100%">
+								<l:Grid
+									containerQuery="true"
+									defaultSpan="XL4 L4 M6 S12"
+									hSpacing="0"
+									content="{/website}">
+									<l:content>
+										<l:VerticalLayout width="calc(100% - 1rem)" class="sapUiSmallMarginEnd">
+											<Label text="Text:"/>
+											<l:FixFlex fixFirst="false" vertical="false" class="fixInputInFixFlex">
+												<l:flexContent>
+													<Input
+														id="firstLinkText_Input"
+														type="Text"
+														placeholder="Add a label for your link (e.g. Documentation, Product Page, Video, ...)"
+														tooltip="Add a label for your link"
+														maxLength="20"
+														liveChange=".onChange"
+														valueStateText="Describe your link target (max. 20 characters)"
+														valueLiveUpdate="true"
+														value="{
+															path : 'text',
+															type : 'sap.ui.model.type.String',
+															constraints : {
+																minLength: 1,
+																maxLength: 20
+															}
+														}"/>
+												</l:flexContent>
+												<l:fixContent>
+													<Button icon="sap-icon://delete" press=".onDeleteLink"
+														type="Transparent">
+														<customData>
+															<core:CustomData key="text" value="{text}"/>
+														</customData>
+													</Button>
+												</l:fixContent>
+											</l:FixFlex>
+											<Label text="URL:"/>
+											<Input
+												id="firstLinkURL_Input"
+												width="calc(100% - 2.5rem)"
+												type="Url"
+												placeholder="Add a URL to further information"
+												tooltip="Add a URL to further information (e.g. Documentation, Product Page, Video, ...)"
+												maxLength="300"
+												liveChange=".resetValueState"
+												change=".onChangeURL"
+												valueStateText="Provide a valid URL."
+												valueLiveUpdate="true"
+												value="{
+													path : 'url',
+													type : 'sap.ui.model.type.String',
+														constraints : {
+														minLength: 1,
+														maxLength: 300
+													}
+												}"/>
+										</l:VerticalLayout>
+									</l:content>
+								</l:Grid>
+								<l:HorizontalLayout>
+									<Button id="plus_Button" icon="sap-icon://add" press=".onPlusClicked"
+										type="Ghost" class="sapUiTinyMarginEnd"/>
+								</l:HorizontalLayout>
+								<Label/>
+							</l:VerticalLayout>
+						</WizardStep>
+						<WizardStep id="ContributeStep"
+								validated="false"
+								title="Contribute">
+						<l:VerticalLayout>
+								<Label/>
+								<Title text="You're almost done!" class="almostDoneText"/>
+								<l:HorizontalLayout>
+									<Text text="To submit your contribution, just download your showcase and&#xA0;"/>
+									<Link text="create a pull request" press=".onPressPullRequestLink"/>
+									<Text text="&#xA0;or send it to the UI5 Team&#xA0;"/>
+									<Link text="by E-Mail" href="mailto:openui5@sap.com"/>
+								</l:HorizontalLayout>
+								<Label/>
+								<Button icon="sap-icon://download" press=".onDownload" text="Download Showcase"/>
+								<Label/>
+								<Text id="thankYou_Text" text="Thanks for contributing!" visible="false"
+									class="thankYouText"/>
+							</l:VerticalLayout>
+						</WizardStep>
+					</Wizard>
+				</Page>
+			</NavContainer>
+		</l:flexContent>
+	</l:FixFlex>
+</mvc:View>

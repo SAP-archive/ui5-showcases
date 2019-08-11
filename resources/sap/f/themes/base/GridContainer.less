@@ -1,0 +1,46 @@
+/* ================================== */
+/* CSS for control sap.f/GridContainer  */
+/* Base theme          */
+/* ================================== */
+.sapFGridContainer {
+	position: relative;
+	display: grid;
+
+	&.sapFGridContainerDenseFill {
+		grid-auto-flow: row dense;
+	}
+
+	&.sapFGridContainerSnapToRow .sapFGridContainerItemWrapper > * {
+		min-height: 100%;
+	}
+
+	.sapFGridContainerItemWrapper.sapFGridContainerItemFixedRows > * {
+		max-height: 100%;
+	}
+
+	.sapFGridContainerItemWrapper {
+		min-width: 0;
+	}
+
+	.sapFCard.sapFCardAnalytical {
+		min-height: 100%;
+
+		.sapFCardContent {
+			min-height: 14rem;
+		}
+
+		.sapFCardContentBusy {
+			position: absolute !important;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+}
+
+html[data-sap-ui-browser^="ie"] .sapFGridContainer {
+	.sapFCard.sapFCardAnalytical {
+		height: 100%;
+	}
+}

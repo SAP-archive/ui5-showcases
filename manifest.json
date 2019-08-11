@@ -1,0 +1,145 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "sap.ui5.showcaseApp",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"resources": "resources.json",
+		"ach": "ach"
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "sap.ui5.showcaseApp.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.60.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {},
+				"sap.uxap": {},
+				"showcaseslib": {}
+			},
+			"components": {
+				"showcaseslib.showcase": {},
+				"showcaseslib.showcasePage": {},
+				"showcaseslib.contributionPage": {},
+				"showcaseslib.presentation": {}
+			}
+		},
+		"componentUsages": {
+			"showcase": {
+				"name": "showcaseslib.showcase"
+			},
+			"showcasePage": {
+				"name": "showcaseslib.showcasePage"
+			},
+			"contributionPage": {
+				"name": "showcaseslib.contributionPage"
+			},
+			"presentation": {
+				"name": "showcaseslib.presentation"
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "sap.ui5.showcaseApp.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [
+				{"uri": "css/style.css"}
+			]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"viewPath": "sap.ui5.showcaseApp.view",
+				"controlId": "app",
+				"controlAggregation": "pages",
+				"async": true,
+				"bypassed": {
+					"target": "overview"
+				}
+			},
+			"routes": [
+				{
+					"pattern": "overview/:?query:",
+					"name": "overview",
+					"target": "overview"
+				},
+				{
+					"pattern": "home",
+					"name": "home",
+					"target": "home"
+				},
+				{
+					"pattern": "contribute",
+					"name": "contribute",
+					"target": "contribute"
+				},
+				{
+					"pattern": "presentation/:?query:",
+					"name": "presentation",
+					"target": "presentation"
+				}
+			],
+			"targets": {
+				"overview": {
+					"viewName": "Overview",
+					"viewId": "overview",
+					"viewLevel": 0,
+					"transition": "fade"
+				},
+				"home": {
+					"viewName": "Home",
+					"viewId": "home",
+					"viewLevel": 0
+				},
+				"contribute": {
+					"viewName": "Contribute",
+					"viewId": "contribute",
+					"viewLevel": 0
+				},
+				"presentation": {
+					"viewName": "Presentation",
+					"viewId": "presentation",
+					"viewLevel": 0,
+					"transition": "fade"
+				}
+			}
+		}
+	}
+}

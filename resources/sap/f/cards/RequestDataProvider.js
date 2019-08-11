@@ -1,0 +1,6 @@
+/*!
+ * OpenUI5
+ * (c) Copyright 2009-2019 SAP SE or an SAP affiliate company.
+ * Licensed under the Apache License, Version 2.0 - see LICENSE.txt.
+ */
+sap.ui.define(["sap/f/cards/DataProvider","jquery.sap.global","sap/base/Log"],function(e,r,t){"use strict";var a=["no-cors","same-origin","cors"];var i=["GET","POST"];var o=e.extend("sap.f.cards.RequestDataProvider");o.prototype.getData=function(){return this._fetch(this.getSettings().request)};o.prototype._isValidRequest=function(e){if(!e){return false}if(a.indexOf(e.mode)===-1){return false}if(i.indexOf(e.method)===-1){return false}if(typeof e.url!=="string"){return false}return true};o.prototype._fetch=function(e){var a="Invalid request";return new Promise(function(i,o){if(!e){t.error(a);o(a);return}var s={mode:e.mode||"cors",url:e.url,method:e.method&&e.method.toUpperCase()||"GET",data:e.parameters,headers:e.headers,timeout:15e3};if(s.method==="GET"){s.dataType="json"}if(this._isValidRequest(s)){r.ajax(s).done(function(e){i(e)}).fail(function(e,r,t){o(t)})}else{t.error(a);o(a)}}.bind(this))};return o});
