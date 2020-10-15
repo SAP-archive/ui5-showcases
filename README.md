@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/SAP/ui5-showcases.svg?branch=master)](https://travis-ci.org/SAP/ui5-showcases)
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP/ui5-showcases)](https://api.reuse.software/info/github.com/SAP/ui5-showcases)
 ![UI5 logo](./.misc/UI5_logo_wide.png)
 
 # UI5 Showcases
@@ -20,8 +21,3 @@ There are no known major issues at the moment.
 
 ## Support
 To report a bug on the UI5 showcases app, please use the [GitHub issue tracker](https://github.com/SAP/ui5-showcases/issues). For other questions, you can reach us in the `#ui5-showcases` channel of the [OpenUI5 Community Slack](https://ui5-slack-invite.cfapps.eu10.hana.ondemand.com/).
-
-
-## License
-Copyright (c) 2019 SAP SE or an SAP affiliate company. All rights reserved.
-This file is licensed under the Apache Software License, v. 2 except as noted otherwise in the [LICENSE](/LICENSE) file.
