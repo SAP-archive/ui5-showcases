@@ -66,4 +66,9 @@ You need to have the following tools installed:
 ### Create a Pull Request
 [Create a pull request](https://help.github.com/articles/creating-a-pull-request) from the feature branch of the forked repository to the master branch of the original repository.
 
-We will review your changes and get back to you. 
+We will review your changes and get back to you.
+
+
+## Developer Certificate of Origin (DCO)
+
+Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
