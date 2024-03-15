@@ -477,6 +477,41 @@
 					"text": "Project Info"
 				}
 			]
+		},
+		{
+		   "title":"SAPUI5 CPQ (Configure-Price&Quote)",
+		   "teaser":"",
+		   "author":"Musa Arda",
+		   "description":"SAPUI5 CPQ App runs on SAP Hana Cloud Platform.\nIt was developed in SAP WebIDE with SAPUI5. (Extending SAPUI5 Controls)\nIt is embedded in an HTML Mashup in SAP Hybris C4C Customer Quote Screen.\nIt is a hybrid app, connecting both C4C and SAP ERP. \nIt consumes OData services for connecting C4C and ERP.\nIt uses SSO (Single Sign On) for authentication.\nIt uses Real-Time SAP Variant Configuration Data for Materials.",
+		   "usage":"This app is completely developed in SAPUI5. Mainly with standard controls. I have also extended some controls.",
+		   "image":{
+		      "url":"sapui5_cpq__configure_price_quote__mainImage.png",
+		      "text":"...",
+		      "device":"desktop"
+		   },
+		   "devices":[
+		      "desktop"
+		   ],
+		   "imageURL":[
+		      {
+			 "url":"sapui5_cpq__configure_price_quote__1.png",
+			 "text":"..."
+		      },
+		      {
+			 "url":"sapui5_cpq__configure_price_quote__2.png",
+			 "text":"..."
+		      },
+		      {
+			 "url":"sapui5_cpq__configure_price_quote__3.png",
+			 "text":"..."
+		      }
+		   ],
+		   "website":[
+		      {
+			 "url":"",
+			 "text":"SAPUI5 CPQ, C4C, ERP"
+		      }
+		   ]
 		}
 	]
 }
